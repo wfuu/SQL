@@ -28,3 +28,5 @@ FROM db.seller d
 	JOIN db.finance f ON d.seller_id = f.seller_id
 WHERE status = 'active' AND LEFT(yrmoday,7) = '2016-05'
 ORDER BY f.seller_id,billing_code,yrmoday DESC
+
+# In other scenarios, such as when joining parts of the same table after different filters, subquerying is necessary.
